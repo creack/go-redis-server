@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
-	redis "github.com/dotcloud/go-redis-server"
+
+	redis "github.com/creack/go-redis-server"
 )
 
+// MyHandler is a custom handler that extends the default one
 type MyHandler struct {
 	redis.DefaultHandler
 }

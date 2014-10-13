@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dotcloud/go-redis-server.png)](https://travis-ci.org/dotcloud/go-redis-server)
+[![Build Status](https://travis-ci.org/creack/go-redis-server.png)](https://travis-ci.org/creack/go-redis-server)
 
 Redis server protocol library
 =============================
@@ -17,7 +17,7 @@ Sample code
 package main
 
 import (
-	redis "github.com/dotcloud/go-redis-server"
+	redis "github.com/creack/go-redis-server"
 )
 
 type MyHandler struct {
@@ -41,4 +41,3 @@ func main() {
 }
 ```
 
-Copyright (c) dotCloud 2013
