@@ -4,6 +4,15 @@ go:
  - 1.3.3
  - tip
 
-script:
- - go test -cover -v ./...
+install:
+ - export PATH=$HOME/gopath/bin:$PATH
+ - go get code.google.com/p/go.tools/cmd/cover
+ - go get code.google.com/p/go.tools/cmd/vet
+ - go get github.com/golang/lint/golint
 
+script:
+ - gofmt -s -l .
+ - go vet . || true
+ - golint .
+ - go test -cover -coverprofile=/tmp/c.out -v .
+ - go tool cover -func /tmp/c.out
